@@ -1,24 +1,24 @@
-# README
+README
+This README would normally document whatever steps are necessary to get the application up and running.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Things you may want to cover:
 
-Things you may want to cover:
+*Ruby version 2.7.2 Rails version 7.0.1
 
-* Ruby version
+*System dependencies
 
-* System dependencies
+*Configuration
 
-* Configuration
+*Database creation
 
-* Database creation
+*Database initialization
 
-* Database initialization
+*How to run the test suite
 
-* How to run the test suite
+*Services (job queues, cache servers, search engines, etc.)
 
-* Services (job queues, cache servers, search engines, etc.)
+*Deployment instructions
 
-* Deployment instructions
-
-* ...
+*Object real
+  1. admin
+  2. user

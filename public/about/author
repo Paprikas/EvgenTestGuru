@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Автор</h1>
+      <b>Богдашев Евгений</b>
+    <h1>GitHub</h1>
+        <b>https://github.com/EvgeniyBogd/TestGuru.git</b>
+  </body>
+</html>
