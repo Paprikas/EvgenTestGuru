@@ -5,6 +5,6 @@ class Test < ApplicationRecord
   has_many :users, through: :test_users
 
   def self.tests_by_category(name_category)
-    joins(:categories).where('categories.title = ?', name_category).order(title: :desc).select(:title)
+    joins(:category).where('category.title = ?', name_category).order(title: :desc).pluck(:title)
   end
 end

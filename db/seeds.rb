@@ -11,16 +11,16 @@ categories = Category.create([
   {title: 'Game development'}])
 
 tests = Test.create([
-  {title: 'Test Ruby', category_id: 1},
-  {title: 'Test Kotlin', level: 1, category_id: 2},
-  {title: 'Test C#', level: 2, category_id: 3}])
+  {title: 'Test Ruby', category_id: categories[0].id},
+  {title: 'Test Kotlin', level: 1, category_id: categories[1].id},
+  {title: 'Test C#', level: 2, category_id: categories[2].id}])
 
 questions = Question.create([
-  {body: 'question 1', test_id: 1}])
+  {body: 'question 1', test_id: tests[0].id}])
 
 answers = Answer.create([
-  {body: 'answer 1', correct: true, question_id: 1},
-  {body: 'answer 2', question_id: 1}])
+  {body: 'answer 1', correct: true, question_id: questions[0].id},
+  {body: 'answer 2', question_id: questions[0].id}])
 
-user = Users.create([
+user = User.create([
   {name: 'Adam'}])
