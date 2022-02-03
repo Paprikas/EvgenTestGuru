@@ -3,8 +3,6 @@ class User < ApplicationRecord
   has_many :tests, through: :test_users
   has_many :created_tests, class_name: 'Test', foreign_key: :author_id
 
-  def user_level_tests(level)
-    tests.where(level: level)
-  end
+  scope :user_level_tests, -> (level)  {tests.where(level: level)}
 
 end
