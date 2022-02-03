@@ -10,4 +10,8 @@ class Test < ApplicationRecord
   scope :hard, -> {where(level:5..Float::INFINITY)}
   scope :tests_by_category, -> (name_category) {joins(:category).where('category.title = ?', name_category).order(title: :desc).pluck(:title)}
 
+  validates :title, presence: true
+  validates :level, numericality: {only_integer: true, greater_than_or_equal_to: 0}
+  validates :title, uniqueness: {scope: :level, messege: "A Test with the same title and level already exisis"}
+
 end
