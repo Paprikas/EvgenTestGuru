@@ -9,8 +9,7 @@ class Test < ApplicationRecord
   scope :low, -> {where(level: 2..4)}
   scope :hard, -> {where(level:5..Float::INFINITY)}
   scope :tests_by_category, -> (name_category) {joins(:category).where('category.title = ?', name_category)}
-  scope :user_level_tests, -> (level, user_id)  {joins(:users).where('tests.level = ? and test_users.user_id = ?', level, user_id )}
-
+  
   validates :title, presence: true
   validates :level, numericality: {only_integer: true, greater_than_or_equal_to: 0}
   validates :title, uniqueness: {scope: :level, messege: "A Test with the same title and level already exisis"}
