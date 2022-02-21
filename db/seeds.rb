@@ -5,22 +5,23 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-categories = Category.create([
+categories = Category.create!([
   {title: 'Web development'},
   {title: 'Mobile development'},
   {title: 'Game development'}])
 
-tests = Test.create([
-  {title: 'Test Ruby', category_id: categories[0].id},
-  {title: 'Test Kotlin', level: 1, category_id: categories[1].id},
-  {title: 'Test C#', level: 2, category_id: categories[2].id}])
+ users = User.create!([
+  {name: 'Adam', email: '11@mail.ru'}]) 
 
-questions = Question.create([
+tests = Test.create!([
+  {title: 'Test Ruby', category_id: categories[0].id, author_id: users[0].id},
+  {title: 'Test Kotlin', level: 1, category_id: categories[1].id, author_id: users[0].id},
+  {title: 'Test C#', level: 2, category_id: categories[2].id, author_id: users[0].id}])
+
+questions = Question.create!([
   {body: 'question 1', test_id: tests[0].id}])
 
 answers = Answer.create([
   {body: 'answer 1', correct: true, question_id: questions[0].id},
   {body: 'answer 2', question_id: questions[0].id}])
 
-user = User.create([
-  {name: 'Adam'}])

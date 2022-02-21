@@ -1,0 +1,9 @@
+<h2>Тест <%= @test.title %>; уровень <%= @test.level %> </h2>
+
+  <% @test.questions.each do |question| %>
+   <ul>
+    <li>Вопрос № <%= question.id %> </li>
+    <li> <%= question.body %> </li>
+    <li> <%= button_to "Delete", question_path(question), method: :delete %>
+   </ul> 
+   <% end %>
