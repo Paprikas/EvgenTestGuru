@@ -1,0 +1,8 @@
+<h3> Your result: 
+<% if @test_passage.successfull? %> 
+<p>test passed</p> 
+<p style="color:Green"> <%= @test_passage.result %></p>
+<% else %>
+<p>test failed</p>
+<p style="color:Red"> <%= @test_passage.result %> </p>
+<% end %> </h3>
