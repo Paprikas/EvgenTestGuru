@@ -5,5 +5,13 @@ module ApplicationHelper
     
     def github_url(author, repo)
       link_to 'Test Guru', 'https://github.com/#{author}/#{repo}'
-    end    
+    end 
+    
+    def flash_messages
+      if flash.any?
+        flash.each do |type, msg|
+          concat(content_tag :p, msg, id: type, class: 'flash')
+        end
+      end
+    end      
 end
