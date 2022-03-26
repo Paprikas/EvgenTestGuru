@@ -2,11 +2,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user,
                 :logged_in?
+                :set_current_path
   
   private
 
   def authenticate_user!
    unless current_user
+    set_current_path
     redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password pleases'
    end
 
@@ -20,5 +22,9 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user.present?
   end
+
+  def set_current_path
+    session[:last_path] = request.url
+  end  
 
 end
