@@ -1,4 +1,5 @@
 module ApplicationHelper
+    
     def current_year
       Date.today.year
     end
@@ -8,10 +9,6 @@ module ApplicationHelper
     end 
     
     def flash_messages
-      if flash.any?
-        flash.each do |type, msg|
-          concat(content_tag :p, msg, id: type, class: 'flash')
-        end
-      end
-    end      
+      content_tag :p, flash[:alert], class: 'flash alert' if flash[:alert]
+    end
 end
