@@ -1,0 +1,16 @@
+<header>
+<%= link_to 'Test Guru', root_path%>
+
+<% if logged_in? %>
+  <p class="nav user">Welcome, <b><%= current_user.name %></b> Guru </p>
+  <p class="nav user"> <%= link_to 'Log out', logout_path, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></p>
+<% else %>
+  <p class="nav user">
+  <%= link_to 'Sign up', signup_path %>
+  <%= link_to 'Log in', login_path %>
+<% end %>
+</p>
+
+
+
+</header>
