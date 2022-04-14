@@ -1,6 +1,12 @@
-require 'digest/sha1'
-
 class User < ApplicationRecord
+  
+  devise :database_authenticatable, 
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable,
+         :trackable,
+         :confirmable
 
   has_many :test_passages
   has_many :tests, through: :test_passages
@@ -10,8 +16,7 @@ class User < ApplicationRecord
                     format: { with: URI::MailTo::EMAIL_REGEXP },
                     uniqueness: { case_sensitive: false }
 
-  has_secure_password
-
+  
   def user_level_tests(level)
     tests.where(level: level)
   end
@@ -19,5 +24,9 @@ class User < ApplicationRecord
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end 
+
+  def admin?
+    self.type == 'Admin'
+  end  
   
 end
