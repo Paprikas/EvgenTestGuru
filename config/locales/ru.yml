@@ -1,5 +1,67 @@
 ---
 ru:
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        create:
+          title: "Название"
+          level: "Уровень"
+          category: "Категория"  
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"        
+        
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      amount: "Кол-во вопросов"
+    test:
+      start: "Старт"  
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+      passed: "Тест пройден"
+      failed: "Тест не пройден"    
+
+  admin:
+    tests:
+      index:
+        new: "Создать новый Тест"
+        head: "Все тесты"
+        title: "Название"
+        level: "Уровень"
+        amount: "Кол-во вопросов"
+        actions: "Действия"
+      create:
+        success: "Тест успешно создан."
+      test:
+        show: "Посмотреть"
+        edit: "Изменить"
+        delete: "Удалить" 
+        sure: "Вы уверены?"
+      show:
+        new: "Создать новый Тест"
+        questions: "Вопросы"
+        actions: "Действия"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"   
+  
+  
   activerecord:
     errors:
       messages:
