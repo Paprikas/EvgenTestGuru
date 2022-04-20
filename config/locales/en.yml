@@ -31,3 +31,119 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"      
+
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      amount: "Amount"
+    test:
+      start: "Старт"
+      
+
+  test_passages:
+    result:
+      header: "The %{title} Test was Completed!"
+      passed: "Test passed"
+      failed: "Test failed"    
+
+  admin:
+    tests:
+      index:
+        head: "All Tests"
+        title: "Title"
+        level: "Level"
+        amount: "Amount"
+        actions: "Actions"
+      create:
+        success: "Test was siccessfully created"
+      test:
+        new: "Create new Test"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?" 
+      show:
+        new: "Create new Test"
+        questions: "Questions"
+        actions: "Actions"   
+      
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"      
+
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute"
+      less_than_x_seconds:
+        one:   "less than 1 second"
+        other: "less than %{count} seconds"
+      x_seconds:
+        one:   "1 second"
+        other: "%{count} seconds"
+      less_than_x_minutes:
+        one:   "less than a minute"
+        other: "less than %{count} minutes"
+      x_minutes:
+        one:   "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one:   "about 1 hour"
+        other: "about %{count} hours"
+      x_days:
+        one:   "1 day"
+        other: "%{count} days"
+      about_x_months:
+        one:   "about 1 month"
+        other: "about %{count} months"
+      x_months:
+        one:   "1 month"
+        other: "%{count} months"
+      about_x_years:
+        one:   "about 1 year"
+        other: "about %{count} years"
+      over_x_years:
+        one:   "over 1 year"
+        other: "over %{count} years"
+      almost_x_years:
+        one:   "almost 1 year"
+        other: "almost %{count} years"
+    prompts:
+      year:   "Year"
+      month:  "Month"
+      day:    "Day"
+      hour:   "Hour"
+      minute: "Minute"
+      second: "Seconds"
+
+  helpers:
+    select:
+      # Default value for :prompt => true in FormOptionsHelper
+      prompt: "Please select"
+
+    # Default translation keys for submit and button FormHelper
+    submit:
+      create: 'Create %{model}'
+      update: 'Update %{model}'
+      submit: 'Save %{model}'      

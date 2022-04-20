@@ -1,11 +1,11 @@
 <h2> <%= @test.title %> </h2>
 
-<%= link_to 'New question', new_admin_test_question_path(@test) %>
+<%= link_to t('.new'), new_admin_test_question_path(@test) %>
 
 <table>
   <tr>
-    <th colspan="2">Questions</th>
-    <th colspan="3">Actions</th> 
+    <th colspan="2"><%= t('.questions') %></th>
+    <th colspan="3"><%= t('.actions') %></th> 
   </tr>
   <%= render @test.questions %>
 </table>  

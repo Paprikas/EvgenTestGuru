@@ -1,0 +1,13 @@
+en:
+  activrecord:
+    models:
+      test: "Test"
+
+    attributes:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+        author_id: "Author"
+
+          
