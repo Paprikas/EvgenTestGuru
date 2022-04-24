@@ -1,12 +1,12 @@
 ru:
-  activrecord:
+  activerecord:
     models:
       test: "Тест"
     attributes:
       test:
         title: "Название"
         level: "Уровень"
-        category_id: "Категория"
-        author_id: "Автор"
+        category: "Категория"
+        author: "Автор"
 
           

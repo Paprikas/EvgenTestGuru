@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>TestGuru</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,12 +14,35 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    
-    <%= flash_messages %>
-      
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <%= render 'shared/nav' %>
+        
+        <div class="container">
+         
 
-    <%= render 'layouts/footer' %>
+         <% if flash[:success] %>
+           <div class="alert alert-success" role="alert">
+              <%= flash_messages %>
+            </div> 
+          <% elsif flash[:error] %>
+            <div class="alert alert-danger" role="alert">
+              <%= flash_messages %>
+            </div> 
+          <% elsif flash[:alert] %>
+            <div class="alert alert-danger" role="alert">
+              <%= flash_messages %>
+            </div> 
+          <% end %>   
+
+        </div>
+      
+        <%= yield %>
+
+        <%= render 'layouts/footer' %>
+      </div>
+    </div>    
+
+    
   </body>
 </html>

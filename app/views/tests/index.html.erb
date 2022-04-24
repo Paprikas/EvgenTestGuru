@@ -1,12 +1,14 @@
 <h1> <%= t('.header')%> </h1>
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.amount') %></th>
-  </tr>
-
-  <%= render @tests %>
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><%= t('.title') %></th>
+      <th scope="col"><%= t('.level') %></th>
+      <th scope="col"><%= t('.amount') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @tests %>
+  </tbody>
 </table>    
