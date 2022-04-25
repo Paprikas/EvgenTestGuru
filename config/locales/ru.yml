@@ -42,6 +42,10 @@ ru:
         actions: "Действия"
       create:
         success: "Тест успешно создан."
+      update: 
+        success: "Тест успешно изменен."
+      destroy:
+        success: "Тест успешно удален."    
       test:
         show: "Посмотреть"
         edit: "Изменить"

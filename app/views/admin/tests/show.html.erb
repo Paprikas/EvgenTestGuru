@@ -2,10 +2,15 @@
 
 <%= link_to t('.new'), new_admin_test_question_path(@test) %>
 
-<table>
-  <tr>
-    <th colspan="2"><%= t('.questions') %></th>
-    <th colspan="3"><%= t('.actions') %></th> 
-  </tr>
-  <%= render @test.questions %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t('.questions') %></th>
+      <th scope="col" colspan="3"><%= t('.actions') %></th> 
+    </tr>
+  </thead>
+  <tbody>  
+    <%= render @test.questions %>
+  </tbody>  
 </table>  

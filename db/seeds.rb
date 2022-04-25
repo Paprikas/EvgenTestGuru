@@ -11,7 +11,8 @@ categories = Category.create!([
   {title: 'Game development'}])
 
  users = User.create!([
-  {name: 'Adam', last_name: 'Demigod', email: '1@mail.ru', password: '111111', type: 'Admin'}]) 
+  {name: 'Adam', last_name: 'Demigod', email: '1@mail.ru', password: '111111', type: 'Admin'},
+  {name: 'Eva', last_name: 'Demigod', email: '2@mail.ru', password: '222222', type: 'User'}]) 
 
 tests = Test.create!([
   {title: 'Test Ruby', category_id: categories[0].id, author_id: users[0].id},

@@ -19,22 +19,7 @@
         <%= render 'shared/nav' %>
         
         <div class="container">
-         
-
-         <% if flash[:success] %>
-           <div class="alert alert-success" role="alert">
-              <%= flash_messages %>
-            </div> 
-          <% elsif flash[:error] %>
-            <div class="alert alert-danger" role="alert">
-              <%= flash_messages %>
-            </div> 
-          <% elsif flash[:alert] %>
-            <div class="alert alert-danger" role="alert">
-              <%= flash_messages %>
-            </div> 
-          <% end %>   
-
+          <%= flash_messages %>
         </div>
       
         <%= yield %>
