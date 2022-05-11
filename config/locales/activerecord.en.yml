@@ -1,5 +1,5 @@
 en:
-  activrecord:
+  activerecord:
     models:
       test: "Test"
 
@@ -7,7 +7,7 @@ en:
       test:
         title: "Title"
         level: "Level"
-        category_id: "Category"
-        author_id: "Author"
+        category: "Category"
+        author: "Author"
 
           

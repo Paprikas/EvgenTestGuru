@@ -10,7 +10,11 @@ class ApplicationController < ActionController::Base
 private
 
   def after_sign_in_path_for(resource)
-    admin_tests_path if current_user.admin?
+    if current_user.admin?
+      admin_tests_path
+    else 
+      root_path
+    end     
   end
   
   def set_locale

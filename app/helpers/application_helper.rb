@@ -1,5 +1,7 @@
 module ApplicationHelper
-    
+
+  FLASH_BOOTSTRAP = { success: 'alert alert-success', alert: 'alert alert-danger', error: 'alert alert-danger' }
+     
     def current_year
       Date.today.year
     end
@@ -10,7 +12,9 @@ module ApplicationHelper
     
     def flash_messages
       flash.map do |key, msg|
-        content_tag :p, msg, id: key, class: 'flash #{key}' if flash[key]
-      end.join.html_safe  
+        alert_type = FLASH_BOOTSTRAP[key.to_sym]
+        content_tag :div, msg, class: alert_type, role: 'alert'
+      end.join.html_safe 
     end
+   
 end

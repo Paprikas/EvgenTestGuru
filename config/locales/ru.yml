@@ -6,12 +6,7 @@ ru:
       test:
         create: "Создать Тест"
         update: "Обновить Тест"
-    label:
-      test:
-        create:
-          title: "Название"
-          level: "Уровень"
-          category: "Категория"  
+      
 
   shared:
     errors:
@@ -47,6 +42,10 @@ ru:
         actions: "Действия"
       create:
         success: "Тест успешно создан."
+      update: 
+        success: "Тест успешно изменен."
+      destroy:
+        success: "Тест успешно удален."    
       test:
         show: "Посмотреть"
         edit: "Изменить"
