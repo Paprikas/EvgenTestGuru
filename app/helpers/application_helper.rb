@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  FLASH_BOOTSTRAP = { success: 'alert alert-success', alert: 'alert alert-danger', error: 'alert alert-danger' }
+  FLASH_BOOTSTRAP = { success: 'alert alert-success', alert: 'alert alert-danger', error: 'alert alert-danger', notice: 'alert alert-success' }
      
     def current_year
       Date.today.year

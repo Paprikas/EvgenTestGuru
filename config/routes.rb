@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :gists
-
+  
     root 'tests#index'
 
     devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
@@ -15,6 +14,7 @@ Rails.application.routes.draw do
       member do 
         get :result
       end
+      resources :gists, only: %i[ create ]
     end 
   
     namespace :admin do
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
           resources :answers, shallow: true, expect: :index
         end
       end 
-    end
+        resources :gists, only: %i[ index ]
+    end    
          
 end

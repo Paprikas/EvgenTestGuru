@@ -29,7 +29,9 @@ ru:
     result:
       header: "Тест %{title} успешно завершен!"
       passed: "Тест пройден"
-      failed: "Тест не пройден"    
+      failed: "Тест не пройден"
+    show:
+      gist_question: "Отправить Гист вопроса"       
 
   admin:
     tests:
@@ -60,6 +62,11 @@ ru:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"   
   
+  gists:
+    create:
+       success: "Успешно"
+       failure: "Возникли ошибки"
+    
   
   activerecord:
     errors:
