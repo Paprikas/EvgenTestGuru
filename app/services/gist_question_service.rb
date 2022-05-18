@@ -14,7 +14,7 @@ class GistQuestionService
     end 
     
     def success?
-      @client.last_response.status < 400
+      @client.last_response.status < 300
     end  
   
     private

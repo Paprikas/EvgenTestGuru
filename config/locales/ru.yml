@@ -64,7 +64,8 @@ ru:
   
   gists:
     create:
-       success: "Успешно"
+       success_html: "Успешно: %{url}"
+       link: "Link"
        failure: "Возникли ошибки"
     
   

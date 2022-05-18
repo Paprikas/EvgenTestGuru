@@ -20,7 +20,7 @@ class GistsController < ApplicationController
     flash_options = if client.success?
 
       gist_save(@test_passage.user, @test_passage.current_question.id, result.data.html_url)
-      flash_options = { notice: t('.success', link_to: '#{@gist.url}') }
+      flash_options = { notice: t('.success_html',  url: result.data.html_url) }
             
     else
        flash_options = { alert: t('.failure') } 
@@ -39,8 +39,8 @@ class GistsController < ApplicationController
     end
 
     def gist_save(user, question, url)
-      @gist = user.gists.new(question_id: question, url: url,)
-      @gist.save!
+      @gist = user.gists.new(question_id: question, url: url)
+      @gist.save
 
     end  
     
