@@ -60,7 +60,9 @@ en:
     result:
       header: "The %{title} Test was Completed!"
       passed: "Test passed"
-      failed: "Test failed"    
+      failed: "Test failed" 
+    show:
+      gist_question: "Gist Question"     
 
   admin:
     tests:
@@ -86,7 +88,12 @@ en:
 
   tests_mailer:
     completed_test:
-      subject: "You just completed the TestGuru test!"      
+      subject: "You just completed the TestGuru test!" 
+
+  gists:
+    create:
+       success: "Success"
+       failure: "Failure"         
 
 
   datetime:

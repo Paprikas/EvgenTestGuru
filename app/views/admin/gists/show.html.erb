@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @gist %>
+
+<div>
+  <%= link_to "Edit this gist", edit_gist_path(@gist) %> |
+  <%= link_to "Back to gists", gists_path %>
+
+  <%= button_to "Destroy this gist", @gist, method: :delete %>
+</div>

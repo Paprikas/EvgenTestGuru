@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Gists</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"><%= t('.question') %></th>
+      <th scope="col"><%= t('.url') %></th>
+      <th scope="col"><%= t('.email') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @gists %>
+  </tbody>
+</table>    
