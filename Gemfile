@@ -58,6 +58,8 @@ gem 'rails-i18n', '~> 7.0.0'
 gem 'execjs'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.1.3'
+
+gem 'octicons_helper'
  
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
