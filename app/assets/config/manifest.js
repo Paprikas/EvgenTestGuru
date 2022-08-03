@@ -5,4 +5,4 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= link application.css
+//= link application.scss
