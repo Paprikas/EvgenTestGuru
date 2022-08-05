@@ -6,11 +6,11 @@
       Welcome, <b><%= current_user.name %></b> Guru |
       <%= link_to 'Admin Panel', admin_tests_path if current_user.admin? %> |
       <%= link_to 'Gists', admin_gists_path if current_user.admin? %> |
-      <%= link_to 'Log out', destroy_user_session_path %></p>
+      <%= link_to 'Log out', destroy_user_session_path, data: {turbo_method: :delete} %></p>
 
     <% else %>
       <%= link_to 'Sign up', new_user_registration_path %> |
       <%= link_to 'Log in', new_user_session_path %>
     <% end %>  
   </span>
-</nav>  
+</nav>
